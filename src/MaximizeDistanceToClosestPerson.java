@@ -1,29 +1,12 @@
 public class MaximizeDistanceToClosestPerson {
     public int maxDistToClosest(int[] seats) {
-        int pt1 = -1, max=-1, seat_index = 0;
-
-        for(int i = 0; i < seats.length; i++){
-            if (seats[i] == 1){
-                //update max
-                if((i - pt1)> max){
-                    max = i - pt1;
-                    if(pt1 == -1 && i != 0){
-                        seat_index = 0;
-                    }
-                    else{
-                        seat_index = (pt1 + i)/2;
-                    }
-
-                }
-                //save last person index
-                pt1 = i;
-            }
+        int i, j, res = 0, n = seats.length;
+        for (i = j = 0; j < n; ++j) if (seats[j] == 1) {
+            if (i == 0) res = Math.max(res, j - i);
+            else res = Math.max(res, (j - i + 1) / 2);
+            i = j + 1;
         }
-        //edge
-        if(( seats.length-1  - pt1)> max){
-            return seats.length - 1;
-        }
-
-        return seat_index;
+        res = Math.max(res, n - i);
+        return res;
     }
 }
