@@ -8,7 +8,7 @@ import java.util.Stack;
 
 
 public class DFS {
-    public void dfs(final TreeNode root) {
+    public void iterativePreorder(final TreeNode root) {
         final Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         while (!stack.isEmpty()) {
@@ -17,5 +17,8 @@ public class DFS {
             if (current.left != null) stack.push(current.left);
             if (current.right != null) stack.push(current.right);
         }
+    }
+    public  void iterativeInorder(){
+        
     }
 }
