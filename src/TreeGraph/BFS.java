@@ -1,4 +1,4 @@
-/*
+package TreeGraph;/*
  * Created by Ho Wang Lam
  * marcohwlam@hotmail.com
  * Copyright (c) Seamless Compute 2018.

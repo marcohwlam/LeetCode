@@ -1,11 +1,15 @@
+package TreeGraph;
+
+import TreeGraph.TreeNode;
+
 public class PreInnerBuildTree {
     /**
      * Definition for a binary tree node.
-     * public class TreeNode {
+     * public class TreeGraph.TreeNode {
      *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode(int x) { val = x; }
+     *     TreeGraph.TreeNode left;
+     *     TreeGraph.TreeNode right;
+     *     TreeGraph.TreeNode(int x) { val = x; }
      * }
      */
 //Pre Root L R
